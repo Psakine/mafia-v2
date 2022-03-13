@@ -23,4 +23,5 @@ Route::controller(PlayerController::class)
     ->prefix('players')
     ->group(function () {
         Route::get('/', 'index');
+        Route::get('/{playerId}', 'player');
     });
