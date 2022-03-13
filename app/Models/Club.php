@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Club extends Model
 {
-    use HasFactory, ModelTableTrait;
+    use HasFactory;
+    use ModelTableTrait;
 
     protected $fillable = [
         'name',

@@ -14,13 +14,15 @@ class PlayerListResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param Request $request
+     * @param  Request $request
      * @return array|Arrayable|JsonSerializable
      */
     #[ArrayShape(['name' => 'string', 'nickname' => 'string'])]
     public function toArray($request): array|JsonSerializable|Arrayable
     {
-        /** @var User $this */
+        /**
+ * @var User $this
+*/
         return [
             'name' => $this->name,
             'nickname' => $this->nickname

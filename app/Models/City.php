@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class City extends Model
 {
-    use HasFactory, ModelTableTrait;
+    use HasFactory;
+    use ModelTableTrait;
 
     protected $fillable = [
         'name'
