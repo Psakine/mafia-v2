@@ -1,5 +1,4 @@
 <template>
-  <PlayersDraft/>
   <PlayersInGame/>
 </template>
 
@@ -8,9 +7,8 @@ import PlayersDraft from "./PlayersDraft";
 import PlayersInGame from "./PlayersInGame";
 
 export default {
-  name : "Apssp",
+  name : "App",
   components : {
-    PlayersDraft,
     PlayersInGame
   }
 }

@@ -8,12 +8,7 @@ use Illuminate\Database\Seeder;
 
 class ClubSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    public function run(): void
     {
         Club::factory()
             ->count(10)

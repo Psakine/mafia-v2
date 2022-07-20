@@ -1,11 +1,5 @@
 <template>
-  <div class="flex overflow-x-auto absolute top-0">
-    <PlayerCard
-        v-for="{name, nickname} in players"
-        v-bind:name="name"
-        v-bind:nickname="nickname"
-    />
-  </div>
+
 </template>
 
 <script>
