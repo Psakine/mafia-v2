@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Traits\ModelTableTrait;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -20,6 +19,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @property int $club_id
  * @property int $city_id
  * @property int $avatar_id
+ * @property Club $club
+ * @property City $city
  */
 class User extends Authenticatable
 {
@@ -28,11 +29,6 @@ class User extends Authenticatable
     use Notifiable;
     use ModelTableTrait;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'name',
         'email',
@@ -44,21 +40,11 @@ class User extends Authenticatable
         'avatar_id'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
