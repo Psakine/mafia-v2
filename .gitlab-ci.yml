@@ -23,7 +23,7 @@ phpcs-job:
   stage: linting
   image: registry.gitlab.com/pipeline-components/php-codesniffer:latest
   script:
-    - phpcs -s -p --colors --extensions=php --standard=PSR12 .
+    - phpcs -s -p --colors --extensions=php ./app --standard=PSR12 .
 
 
 build-job:       # This job runs in the build stage, which runs first.
