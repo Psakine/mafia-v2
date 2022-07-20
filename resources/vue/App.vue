@@ -1,10 +1,16 @@
 <template>
-
+  <PlayersInGame/>
 </template>
 
 <script>
+import PlayersDraft from "./PlayersDraft";
+import PlayersInGame from "./PlayersInGame";
+
 export default {
-  name : "Apssp"
+  name : "App",
+  components : {
+    PlayersInGame
+  }
 }
 </script>
 

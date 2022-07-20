@@ -3,27 +3,24 @@
 namespace App\Http\Resources\Player;
 
 use App\Models\User;
-use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-use JetBrains\PhpStorm\ArrayShape;
-use JsonSerializable;
 
 class PlayerListResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
      *
-     * @param  Request $request
-     * @return array|Arrayable|JsonSerializable
+     * @param Request $request
+     * @return array
      */
-    #[ArrayShape(['name' => 'string', 'nickname' => 'string'])]
-    public function toArray($request): array|JsonSerializable|Arrayable
+    public function toArray($request): array
     {
         /**
- * @var User $this
-*/
+         * @var User $this
+         */
         return [
+            'id' => $this->id,
             'name' => $this->name,
             'nickname' => $this->nickname
         ];
