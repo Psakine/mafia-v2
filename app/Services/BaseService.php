@@ -17,7 +17,7 @@ abstract class BaseService
     protected function getModel(): string
     {
         if ('' === static::MODEL) {
-            throw new ModelNotFoundException('Нужно присвоить модель "protected const MODEL"');
+            throw new ModelNotFoundException();
         }
 
         return static::MODEL;
