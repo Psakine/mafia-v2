@@ -20,6 +20,7 @@
     <exclude-pattern>node_modules/*</exclude-pattern>
     <exclude-pattern>vendor/*</exclude-pattern>
     <exclude-pattern>docker/*</exclude-pattern>
+    <exclude-pattern>public/*</exclude-pattern>
 
     <!-- Show progression -->
     <arg value="p"/>
