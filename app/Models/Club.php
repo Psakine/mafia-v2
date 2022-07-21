@@ -16,6 +16,9 @@ class Club extends Model
     use HasFactory;
     use ModelTableTrait;
 
+    /**
+     * @var string[]
+     */
     protected $fillable = [
         'name',
         'city_id'
