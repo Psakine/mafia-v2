@@ -16,6 +16,9 @@ class City extends Model
     use HasFactory;
     use ModelTableTrait;
 
+    /**
+     * @var string[]
+     */
     protected $fillable = [
         'name'
     ];
